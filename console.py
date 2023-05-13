@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """AirBnb Console"""
 import cmd
 from models.amenity import Amenity
