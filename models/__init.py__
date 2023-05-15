@@ -1,9 +1,9 @@
+<<<<<<< HEAD
 #!/usr/bin/python3
 
 """The script __init__ dunder method for the models directory"""
 
 from models.engine.file_storage import FileStorage
+=======
+>>>>>>> 7fa2f87a435f279a02ae6e8095818dbd81941a6c
 
-
-storage = FileStorage()
-storage.reload()
