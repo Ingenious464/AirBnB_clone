@@ -1,3 +1,4 @@
+![hbnb_logo](https://github.com/Ingenious464/AirBnB_clone/assets/117749127/80e1bb6d-b90f-4d48-9286-9d3d3be334d2)
 # 0x00. AirBnB clone - The console
 
 ## Background Context
