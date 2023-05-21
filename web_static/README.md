@@ -65,3 +65,4 @@ Current screenshots have been done on Chrome 56 or more.
 No cross browsers
 You have to follow all requirements but some margin/padding are missing - you should try to fit as much as you can to screenshots
 ### More Info
+![hbnb_step1](https://github.com/Ingenious464/AirBnB_clone/assets/117749127/2a4fb1fc-fc37-4f1d-a241-a80f8ebfb9d7)
