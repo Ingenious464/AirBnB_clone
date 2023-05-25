@@ -1,51 +1,5 @@
 #!/usr/bin/python3
-<<<<<<< HEAD
-""" BaseModel """
-from datetime import datetime
-import models
-from uuid import uuid4
-
-
-class BaseModel():
-    """ BaseModel Class """
-
-    def __init__(self, *args, **kwargs):
-        """ Initialize objects """
-        if kwargs:
-            for k, v in kwargs.items():
-                if k == 'created_at' or k == 'updated_at':
-                    setattr(self,
-                            k, datetime.strptime(v, "%Y-%m-%dT%H:%M:%S.%f"))
-                elif k == '__class__':
-                    continue
-                else:
-                    setattr(self, k, v)
-        else:
-            self.id = str(uuid4())
-            self.created_at = datetime.now()
-            self.updated_at = datetime.now()
-        """models.storage.new(self)"""
-
-    def __str__(self):
-        """ String representation """
-        dic = dict(self.__dict__)
-        return "[{}] ({}) {}".format(self.__class__.__name__, self.id, dic)
-
-    def save(self):
-        """ Update and save object """
-        self.updated_at = datetime.now()
-        models.storage.save()
-
-    def to_dict(self):
-        """ Return directory """
-        dic = dict(self.__dict__)
-        dic['__class__'] = self.__class__.__name__
-        dic['created_at'] = datetime.isoformat(dic['created_at'])
-        dic['updated_at'] = datetime.isoformat(dic['updated_at'])
-        return dic
-=======
-"""This module defines the BaseModel class."""
-
+"""Defines the BaseModel class."""
 import models
 from uuid import uuid4
 from datetime import datetime
@@ -55,8 +9,7 @@ class BaseModel:
     """Represents the BaseModel of the HBnB project."""
 
     def __init__(self, *args, **kwargs):
-        """
-        Initialize a new BaseModel.
+        """Initialize a new BaseModel.
         Args:
             *args (any): Unused.
             **kwargs (dict): Key/value pairs of attributes.
@@ -80,8 +33,7 @@ class BaseModel:
         models.storage.save()
 
     def to_dict(self):
-        """
-        Return the dictionary of the BaseModel instance.
+        """Return the dictionary of the BaseModel instance.
         Includes the key/value pair __class__ representing
         the class name of the object.
         """
@@ -95,4 +47,3 @@ class BaseModel:
         """Return the print/str representation of the BaseModel instance."""
         clname = self.__class__.__name__
         return "[{}] ({}) {}".format(clname, self.id, self.__dict__)
->>>>>>> 6b19be1cce4ea7893e414e0c9a910cc3ac6b49ca
